@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Eclipse-PlatformFilter: (& (osgi.ws=gtk) (osgi.os=solaris) (osgi.arch=
+ x86))
+Bundle-Vendor: %providerName
+Bundle-Localization: launcher.gtk.solaris.x86
+Fragment-Host: org.eclipse.equinox.launcher;bundle-version="[1.0.0,1.1
+ .0)"
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.equinox.launcher.gtk.solaris.x86;sing
+ leton:=true
+Eclipse-BundleShape: dir
+Bundle-Version: 1.0.201.R35x_v20090720
+Bundle-ManifestVersion: 2

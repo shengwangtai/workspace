@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.eclipsercp.test.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Test Perspective"
+            class="org.eclipsercp.test.Perspective"
+            id="org.eclipsercp.test.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="org.eclipsercp.test.ContactsView"
+            icon="icons/Groups_24.ico"
+            id="org.eclipsercp.test.views.contacts"
+            name="Contacts">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.eclipsercp.test.editor.ChatEditor"
+            default="false"
+            icon="icons/chat.png"
+            id="org.eclipsercp.test.editors.chat"
+            name="Chat">
+      </editor>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipsercp.test.application"
+            name="Test Tool">
+         <property
+               name="appName"
+               value="Test Tool">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/Star_16.png,icons/Star_32.png,icons/star_48.png,icons/star_64.png">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/star_64.png">
+         </property>
+         <property
+               name="aboutText"
+               value="%aboutText">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="000000">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,252,445,20">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="0,443,662,15">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
+
+</plugin>

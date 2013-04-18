@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.eclipsercp.integration.intro.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="org.eclipsercp.integration.intro.Perspective"
+            id="org.eclipsercp.integration.perspective">
+      </perspective>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipsercp.integration.application"
+            name="集成开发工具">
+         <property
+               name="windowImages"
+               value="icons/alt_window_16.gif,icons/alt_window_32.gif">
+         </property>
+         <property
+               name="appName"
+               value="集成开发工具">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro">
+      <intro
+            class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+            id="org.eclipsercp.integration.intro">
+      </intro>
+      <introProductBinding
+            introId="org.eclipsercp.integration.intro"
+            productId="org.eclipsercp.integration.product">
+      </introProductBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.config">
+      <config
+            introId="org.eclipsercp.integration.intro"
+            content="introContent.xml"
+            id="org.eclipsercp.integration.configId">
+         <presentation
+               home-page-id="root">
+            <implementation
+                  kind="html"
+                  os="win32,linux,macosx">
+            </implementation>
+         </presentation>
+      </config>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="org.eclipsercp.integration.view.ProjectTreeView"
+            icon="icons/task.png"
+            id="org.eclipsercp.integration.view.ProjectTreeView"
+            name="项目导航"
+            restorable="true">
+      </view>
+   </extension>
+
+</plugin>

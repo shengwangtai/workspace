@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.5"?>
+
+<target name="Hyperbola Target">
+<locations>
+<location path="${workspace_loc}/HyperbolaTarget/delta.pack" type="Directory"/>
+<location includeAllPlatforms="false" includeMode="slicer" type="InstallableUnit">
+<unit id="org.eclipse.swtbot.eclipse.feature.group" version="2.0.0.568-dev-e35"/>
+<unit id="org.eclipse.swtbot.feature.group" version="2.0.0.568-dev-e35"/>
+<repository location="http://download.eclipse.org/technology/swtbot/galileo/dev-build/update-site"/>
+</location>
+<location includeAllPlatforms="false" includeMode="slicer" type="InstallableUnit">
+<unit id="org.eclipse.help.feature.group" version="1.1.2.R35x_v20100119-7e7eFAnFEx2X_fZltJhDjz-D"/>
+<unit id="org.eclipse.rcp.sdk.id" version="3.5.2.M20100211-1343"/>
+<unit id="org.eclipse.equinox.p2.user.ui.feature.group" version="1.1.2.R35x_v20091106-7u6FbQFUAtsCKD5Fxz0qz0fb2932"/>
+<unit id="org.eclipse.equinox.p2.sdk.feature.group" version="3.5.1.R35x_v20090811-8q7BGE-G13DHKOBciHlrWmr7PD93"/>
+<repository location="http://download.eclipse.org/releases/galileo"/>
+</location>
+<location path="${workspace_loc}/HyperbolaTarget/misc" type="Directory"/>
+</locations>
+</target>
